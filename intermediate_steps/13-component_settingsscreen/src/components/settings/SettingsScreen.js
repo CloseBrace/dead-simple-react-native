@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Switch, Text, View } from 'react-native';
+import { Switch, Text, View } from 'react-native';
 
 // Components
 import Header from '../shared/Header';
