@@ -1,0 +1,24 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    },
+    "sourceType": "module"
+  },
+  "extends": "universe/native",
+  "rules": {
+    "arrow-parens": [2, "as-needed"],
+    "function-paren-newline": 0,
+    "implicit-arrow-linebreak": 0,
+    "object-curly-newline": 0,
+    "operator-linebreak": 0,
+    "react/prop-types": 0,
+    "react/jsx-curly-newline": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-one-expression-per-line": 0,
+    "react/sort-comp": 0,
+    "react/state-in-constructor": [2, "never"]
+  }
+}
