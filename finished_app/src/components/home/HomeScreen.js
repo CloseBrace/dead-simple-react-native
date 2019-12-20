@@ -77,6 +77,7 @@ const HomeScreen = props => {
             >
               <Image source={imgIconAdd} style={{ width: 39, height: 39 }} />
             </TouchableHighlight>
+            <Image source={imgIconRefresh} style={{ width: 50, height: 39 }} />
             <TouchableHighlight
               onPress={onPressSettingsButton}
               underlayColor="rgba(255,255,255,0.2)"
@@ -86,7 +87,6 @@ const HomeScreen = props => {
                 style={{ width: 37, height: 39 }}
               />
             </TouchableHighlight>
-            <Image source={imgIconSettings} style={{ width: 37, height: 39 }} />
           </View>
         </ImageBackground>
       </View>
