@@ -254,17 +254,9 @@ export default class App extends React.Component {
     this.setState({ showSpinner: true, spinnerText });
   };
 
-  toggleRefresh = async () => {
-    const { autoRefresh } = this.state;
-    await this.setState({ autoRefresh: !autoRefresh });
-    this.saveStateToLocal();
-  };
-
   render() {
     const {
-      autoRefresh,
       episodeList,
-      feedUrl,
       podcastImage,
       podcastTitle,
       showSpinner,
@@ -276,10 +268,7 @@ export default class App extends React.Component {
         <Spinner show={showSpinner} text={spinnerText} />
         <AppContainer
           screenProps={{
-            autoRefresh,
-            checkForRefresh: this.checkForRefresh,
             episodeList,
-            feedUrl,
             hideSpinner: this.hideSpinner,
             podcastImage,
             podcastTitle,
@@ -287,7 +276,6 @@ export default class App extends React.Component {
             saveFeedUrl: this.saveFeedUrl,
             showError: this.showError,
             showSpinner: this.showSpinner,
-            toggleRefresh: this.toggleRefresh,
           }}
           style={styles.navigatorContainer}
         />

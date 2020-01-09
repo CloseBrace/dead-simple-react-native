@@ -18,9 +18,6 @@ export default class SettingsScreen extends React.Component {
   });
 
   render() {
-    const {
-      screenProps: { autoRefresh, toggleRefresh },
-    } = this.props;
     return (
       <ImageBackground style={styles.mainBackground} source={imgBkgMain}>
         <View style={styles.content}>
@@ -33,7 +30,6 @@ export default class SettingsScreen extends React.Component {
                   onValueChange={toggleRefresh}
                   thumbColor="#fec7b1"
                   trackColor={{ false: '#977883', true: '#eeabc3' }}
-                  value={autoRefresh}
                 />
               </View>
               <Text style={styles.helpText}>

@@ -8,24 +8,6 @@ export default class HomeScreenContainer extends React.Component {
     header: () => <Header showBack={false} backLink={() => null} />,
   });
 
-  componentDidMount() {
-    const { navigation } = this.props;
-    navigation.addListener('didFocus', () => {
-      this.handleRefreshCheck();
-    });
-  }
-
-  // Refresh the feed if it's been more than two hours
-  handleRefreshCheck = async () => {
-    const {
-      screenProps: { checkForRefresh, feedUrl, populateAppFromUrl },
-    } = this.props;
-    const shouldRefresh = await checkForRefresh();
-    if (shouldRefresh && feedUrl) {
-      populateAppFromUrl();
-    }
-  };
-
   // Catch add button press
   onPressAddButton = () => {
     const { navigation } = this.props;
